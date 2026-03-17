@@ -1,0 +1,17 @@
+ipconfig /all # shows all the IP configuration of the DEVICE
+
+# the Defualt Gateway is the MODEN!
+ping {gateway_ip} # sends a pulse via ICMP and waits or response
+
+'''
+ping = its a command
+latency = its the diff between the START_TIME ( the time the message went) and FINAL_TIME (the time the message arrived)
+its the await time between send and recieved
+
+ms = Miliseconds ( 1sec/1000)
+TTL (time to live) = the time the PACKAGE stays in the network
+TTL starts in 255, 0, IT CANT GO TO 0
+ICMP = protocol for NETWORK TESTING
+
+cURL = Client URL, is a command line tool(LINUX) that you
+can use to transfer data through the internet
