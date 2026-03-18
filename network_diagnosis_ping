@@ -15,3 +15,19 @@ ICMP = protocol for NETWORK TESTING
 
 cURL = Client URL, is a command line tool(LINUX) that you
 can use to transfer data through the internet
+
+
+# This command checks if all the IPs between 192.168.56.1 and 192.168.56.25 are available, then it saves them in a text file
+for /L %i IN (1,1,25) DO @ping -n 1 -w 100 192.168.56.%i | FIND "Resposta" >> listaIPsPUC.txt
+
+for -> ordinary For loop, has a different sintax on CMD
+FOR /L %name_of_variable IN (start,step,limit) DO command
+
+@ -> stops the CMD from printing the "ping 192.blahblah" every time, keeps output clean
+
+-n 1 -> by default PING sends 4 packages, by setting it to 1 it sends only 1 making it 4x faster
+
+-w 100 -> most PCs take less than 100ms to answer, if the Time to Response is too high, it probably doesnt exist
+
+
+
